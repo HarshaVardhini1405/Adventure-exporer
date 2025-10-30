@@ -1,0 +1,20 @@
+/* Background for Login Page */
+.login-bg {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+}
+
+/* Background for Main Page */
+.main-bg {
+  background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* Transitions */
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth fade animation for modal */
+#bookingModal {
+  transition: opacity 0.4s ease-in-out;
+}
