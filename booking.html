@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Trip — WanderScape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div style="font-size:0.95rem">WanderScape</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+        <a href="booking.html" class="cta">Book Trip</a>
+        <a href="login.html" class="small-muted">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section container">
+    <h2>Book Your Trip</h2>
+    <div class="form-card">
+      <form id="bookingForm">
+        <div class="form-row">
+          <input class="input" name="name" placeholder="Full name" required />
+          <input class="input" type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <div class="form-row mt-2">
+          <select class="input" name="destination" required>
+            <option value="">Choose destination</option>
+            <option>-- Bali, Indonesia</option>
+            <option>-- Santorini, Greece</option>
+            <option>-- Reykjavik, Iceland</option>
+          </select>
+          <input class="input" type="date" name="start_date" required />
+        </div>
+
+        <div class="form-row mt-2">
+          <input class="input" type="date" name="end_date" required />
+          <select class="input" name="people" required>
+            <option>1 person</option>
+            <option>2 people</option>
+            <option>3 people</option>
+            <option>4+ people</option>
+          </select>
+        </div>
+
+        <div class="form-row mt-2" style="align-items:center;justify-content:space-between">
+          <button class="cta" type="submit">Confirm Booking</button>
+          <div class="small-muted">Secure booking — mock demo</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr 220px;">
+        <div>
+          <h3 style="color:var(--sand)">WanderScape</h3>
+          <p class="small">Any question? Reach out to hello@wanderscape.com</p>
+        </div>
+        <div style="text-align:right">
+          <div class="small-muted">support</div>
+          <div>+91 98765 43210</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
