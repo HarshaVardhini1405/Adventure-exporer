@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Destinations — WanderScape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div style="font-size:0.95rem">WanderScape</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+        <a href="booking.html" class="cta">Book Trip</a>
+        <a href="login.html" class="small-muted">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section container">
+    <h2>All Destinations</h2>
+
+    <div style="display:flex;gap:0.8rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem">
+      <input id="search-location-dest" class="input" placeholder="Filter by location or country" style="max-width:320px" oninput="filterByText(this.value)">
+      <div class="filters" style="margin-left:auto">
+        <div>
+          <div class="small-muted" style="font-size:0.8rem">Category</div>
+          <div style="margin-top:6px">
+            <button class="filter-btn active" data-group="category" data-value="all">All</button>
+            <button class="filter-btn" data-group="category" data-value="beach">Beach</button>
+            <button class="filter-btn" data-group="category" data-value="adventure">Adventure</button>
+            <button class="filter-btn" data-group="category" data-value="cultural">Cultural</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid dest-cards">
+      <!-- Reusable destination cards (more can be added) -->
+      <article class="card dest-card" data-category="beach" data-budget="mid" data-country="Indonesia">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60" alt="">
+        <div class="card-body">
+          <div class="card-title">Bali, Indonesia</div>
+          <div class="card-row">
+            <div><span class="small-muted">4.7 ★</span> <span class="small-muted"> • 6 days</span></div>
+            <div><button onclick="location.href='booking.html?dest=Bali' " class="cta" style="padding:0.35rem 0.6rem;font-size:0.9rem">Book Now</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card dest-card" data-category="cultural" data-budget="premium" data-country="Greece">
+        <img src="https://images.unsplash.com/photo-1505765052798-37d1f0d3a6e5?auto=format&fit=crop&w=1200&q=60" alt="">
+        <div class="card-body">
+          <div class="card-title">Santorini, Greece</div>
+          <div class="card-row">
+            <div><span class="small-muted">4.9 ★</span> <span class="small-muted"> • 5 days</span></div>
+            <div><button onclick="location.href='booking.html?dest=Santorini' " class="cta" style="padding:0.35rem 0.6rem;font-size:0.9rem">Book Now</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card dest-card" data-category="adventure" data-budget="mid" data-country="Iceland">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="">
+        <div class="card-body">
+          <div class="card-title">Reykjavík, Iceland</div>
+          <div class="card-row">
+            <div><span class="small-muted">4.8 ★</span> <span class="small-muted"> • 7 days</span></div>
+            <div><button onclick="location.href='booking.html?dest=Iceland' " class="cta" style="padding:0.35rem 0.6rem;font-size:0.9rem">Book Now</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add more sample cards to expand grid -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr 220px;">
+        <div>
+          <h3 style="color:var(--sand)">WanderScape</h3>
+          <p class="small">Curated trips and unforgettable experiences.</p>
+        </div>
+        <div style="text-align:right">
+          <div class="small-muted">contact</div>
+          <div>hello@wanderscape.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
