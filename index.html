@@ -1,23 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventure Explorer - Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WanderScape — Explore the world</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="login-bg flex items-center justify-center h-screen">
-  <div class="bg-white bg-opacity-90 p-8 rounded-2xl shadow-lg w-96">
-    <h1 class="text-3xl font-bold text-center mb-6 text-indigo-700">Adventure Explorer</h1>
-    <form id="loginForm" class="space-y-4">
-      <input type="text" id="username" placeholder="Username" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400">
-      <input type="password" id="password" placeholder="Password" class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400">
-      <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition">Login</button>
-      <p id="errorMsg" class="text-red-500 text-center mt-2 hidden">Invalid username or password</p>
-    </form>
-  </div>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div>
+          <div style="font-size:0.95rem">WanderScape</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-top:-2px">Explore • Discover • Book</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+        <a href="booking.html" class="cta">Book Trip</a>
+        <a href="login.html" class="small-muted">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80')"></div>
+    <div class="overlay container">
+      <h1 class="fade-in">Travel farther. Experience more.</h1>
+      <p class="fade-in">WanderScape helps you discover curated destinations, book seamlessly, and make memories that last a lifetime.</p>
+
+      <div class="search-bar fade-in" style="margin-top:0.8rem">
+        <div class="search-inputs">
+          <input id="search-location" type="text" placeholder="Where do you want to go? (e.g. Bali, Paris)" />
+          <input type="date" />
+          <select>
+            <option>1 guest</option>
+            <option>2 guests</option>
+            <option>3 guests</option>
+            <option>4+ guests</option>
+          </select>
+        </div>
+        <button id="exploreNowBtn" class="search-btn">Explore Now</button>
+      </div>
+
+      <div style="margin-top:1rem" class="small-muted">Popular: Bali • Santorini • Tokyo • Reykjavik</div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations -->
+  <section class="section container">
+    <h2>Popular Destinations</h2>
+    <div class="grid dest-cards">
+      <!-- card 1 -->
+      <article class="card dest-card" data-category="beach" data-budget="mid" data-country="Indonesia">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60" alt="Bali beach">
+        <div class="card-body">
+          <div class="card-title">Bali, Indonesia</div>
+          <div class="card-row">
+            <div class="tag">Beach • Relax</div>
+            <div style="text-align:right">
+              <div style="font-weight:700">₹28,000</div>
+              <div class="small-muted">Per person</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 2 -->
+      <article class="card dest-card" data-category="cultural" data-budget="premium" data-country="Greece">
+        <img src="https://images.unsplash.com/photo-1505765052798-37d1f0d3a6e5?auto=format&fit=crop&w=1200&q=60" alt="Santorini">
+        <div class="card-body">
+          <div class="card-title">Santorini, Greece</div>
+          <div class="card-row">
+            <div class="tag">Cultural</div>
+            <div style="text-align:right">
+              <div style="font-weight:700">₹68,000</div>
+              <div class="small-muted">Per person</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- card 3 -->
+      <article class="card dest-card" data-category="adventure" data-budget="mid" data-country="Iceland">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="Iceland landscape">
+        <div class="card-body">
+          <div class="card-title">Reykjavík, Iceland</div>
+          <div class="card-row">
+            <div class="tag">Adventure</div>
+            <div style="text-align:right">
+              <div style="font-weight:700">₹54,000</div>
+              <div class="small-muted">Per person</div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section container">
+    <h2>What travelers say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Aisha P.</strong>
+          <div class="small-muted">Booked a honeymoon package to Santorini — the service was seamless and memorable.</div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="avatar">R</div>
+        <div>
+          <strong>Rohit S.</strong>
+          <div class="small-muted">Went to Iceland for Northern Lights — guides were professional and itinerary perfect.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr 220px;align-items:start">
+        <div>
+          <h3 style="color:var(--sand);margin:0 0 0.6rem">WanderScape</h3>
+          <p class="small">Dream. Explore. Book. We curate experiences that matter.</p>
+          <div style="margin-top:0.6rem">
+            <a href="#" class="small-muted">Privacy</a> • <a href="#" class="small-muted">Terms</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:700">Contact</div>
+          <div class="small-muted">hello@wanderscape.com</div>
+          <div class="small-muted">+91 98765 43210</div>
+        </div>
+      </div>
+      <div style="margin-top:1.2rem;color:rgba(255,255,255,0.8)">© <span id="year"></span> WanderScape. All rights reserved.</div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
