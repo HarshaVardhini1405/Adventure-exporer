@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — WanderScape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">W</div>
+        <div style="font-size:0.95rem">WanderScape</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section container">
+    <h2>Our Story</h2>
+    <p class="small-muted">WanderScape was founded to make travel easier, more meaningful, and responsibly curated. We combine local expertise with bespoke itineraries to create journeys that inspire.</p>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem">
+      <div class="card" style="padding:1rem">
+        <h3>Mission</h3>
+        <p class="small-muted">To connect curious travelers with authentic experiences while supporting local communities.</p>
+      </div>
+
+      <div class="card" style="padding:1rem">
+        <h3>Contact Us</h3>
+        <p class="small-muted">Email: hello@wanderscape.com</p>
+        <p class="small-muted">Phone: +91 98765 43210</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:1.2rem">Send a message</h3>
+    <div class="form-card mt-2">
+      <form onsubmit="alert('Thank you — this is a demo.'); return false;">
+        <div class="form-row">
+          <input class="input" placeholder="Your name" required />
+          <input class="input" type="email" placeholder="Your email" required />
+        </div>
+        <div class="mt-2">
+          <textarea class="input" style="height:120px;width:100%;resize:vertical;padding:0.8rem;border-radius:12px;border:1px solid rgba(2,6,23,0.06)" placeholder="Your message"></textarea>
+        </div>
+        <div class="mt-2" style="display:flex;justify-content:flex-end">
+          <button class="cta" type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1fr 220px;">
+        <div>
+          <h3 style="color:var(--sand)">WanderScape</h3>
+          <p class="small">Let's create journeys that matter.</p>
+        </div>
+        <div style="text-align:right">
+          <div class="small-muted">support</div>
+          <div>hello@wanderscape.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
